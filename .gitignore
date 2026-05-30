@@ -1,0 +1,21 @@
+# 编译产物
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# Qt 编译相关
+Makefile
+.qmake.stash
+moc_*.cpp
+moc_predefs.h
+*.pro.user
+
+# 可执行文件
+design/student_query_system/student_query_system
+practice/x
+
+# 系统文件
+.DS_Store
+Thumbs.db
