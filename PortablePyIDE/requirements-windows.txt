@@ -1,0 +1,5 @@
+PyQt6>=6.7
+PyQt6-QScintilla==2.14.1
+jedi>=0.19
+requests>=2.31
+qtawesome>=1.3
