@@ -31,3 +31,7 @@ out/
 .DS_Store
 Thumbs.db
 *.o
+# DeepSeekConfigTool 可执行文件
+design/DeepSeekConfigTool/DeepSeekConfigTool
+# CSV 备份文件
+*.bak
