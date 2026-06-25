@@ -1,7 +1,9 @@
 #include "csv.h"
 
+#include <QCoreApplication>
 #include <QFile>
 #include <QFileInfo>
+#include <QDir>
 #include <QTextStream>
 
 static QString normalizeName(const QString &name)
@@ -184,10 +186,16 @@ bool CsvTable::ensureBackup(QString *errorMessage)
 
 CsvDatabase::CsvDatabase()
 {
-    m_tables.insert("student", CsvTable("student", "../资料/tab_student.csv"));
-    m_tables.insert("course", CsvTable("course", "../资料/tab_course.csv"));
-    m_tables.insert("class", CsvTable("class", "../资料/tab_class.csv"));
-    m_tables.insert("score", CsvTable("score", "../资料/tab_score.csv"));
+    QString baseDir = QCoreApplication::applicationDirPath();
+    QString dataDir = QDir(baseDir).filePath("../data");
+    if (!QDir(dataDir).exists()) {
+        dataDir = QDir(baseDir).filePath("../资料");
+    }
+
+    m_tables.insert("student", CsvTable("student", QDir(dataDir).filePath("tab_student.csv")));
+    m_tables.insert("course", CsvTable("course", QDir(dataDir).filePath("tab_course.csv")));
+    m_tables.insert("class", CsvTable("class", QDir(dataDir).filePath("tab_class.csv")));
+    m_tables.insert("score", CsvTable("score", QDir(dataDir).filePath("tab_score.csv")));
 }
 
 bool CsvDatabase::loadAll(QString *errorMessage)

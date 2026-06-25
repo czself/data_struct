@@ -16,6 +16,7 @@ public:
     bool save(QString *errorMessage);
 
     QString key() const;
+    QString path() const;
     QStringList headers() const;
     QVector<QStringList> rows() const;
     QVector<QStringList> &rows();
@@ -41,6 +42,7 @@ public:
 
     bool loadAll(QString *errorMessage);
     CsvTable *table(const QString &tableName);
+    const CsvTable *table(const QString &tableName) const;
     QString tableKey(const QString &tableName) const;
 
 private:

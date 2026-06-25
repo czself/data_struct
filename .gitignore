@@ -12,10 +12,22 @@ moc_*.cpp
 moc_predefs.h
 *.pro.user
 
-# 可执行文件
+# 二进制/可执行文件
+design/DeepSeekConfigTool/build/
 design/student_query_system/student_query_system
 practice/x
+*/practice_*
+*/practice_0*
+*/practice_1*
+out/
+
+# IDE/编辑器配置
+.idea/
+.claude/
+.marscode/
+.vscode/
 
 # 系统文件
 .DS_Store
 Thumbs.db
+*.o

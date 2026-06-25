@@ -29,7 +29,7 @@ void LoginDialog::initUi()
     mainLayout->setContentsMargins(34, 28, 34, 26);
     mainLayout->setSpacing(16);
 
-    QLabel *titleLabel = new QLabel("欢迎来带数据结构课设");
+    QLabel *titleLabel = new QLabel("欢迎来到数据结构课设");
     titleLabel->setObjectName("loginTitleLabel");
     titleLabel->setAlignment(Qt::AlignCenter);
 
